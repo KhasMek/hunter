@@ -1,0 +1,5 @@
+.scrapy
+targets
+__pycache__
+*.pyc
+*.json
