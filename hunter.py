@@ -25,7 +25,6 @@ flogger.setLevel(logging.DEBUG)
 flogger_formmatter = logging.Formatter('%(asctime)s  [ %(levelname)-8.8s]  %(message)s')
 flogger.setFormatter(flogger_formmatter)
 
-# logging.basicConfig(handlers=[ch, flogger])
 logger.addHandler(ch)
 logger.addHandler(flogger)
 
@@ -57,13 +56,14 @@ process.settings.set('LOG_SHORT_NAMES', False)
 # process.settings.set('LOG_STDOUT', True)
 
 
-# This is what I'll use in the future.
+# This is what I'll use in the future(?)
 # process.crawl('followall', domain='scrapinghub.com')
 def main():
     print(logo)
     if print_settings:
         for k, v in process.settings.attributes.iteritems():
             print("{}: {}".format(k, v))
+    # crawl(crawler_or_spidercls, *args, **kwargs)
     process.crawl('minerhunter')
     process.start()
     print(" [-] Hunter Complete")
