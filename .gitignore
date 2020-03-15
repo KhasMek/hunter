@@ -1,5 +1,9 @@
-.scrapy
-targets
 __pycache__
-*.pyc
+.idea
+.scrapy
 *.json
+*.pyc
+*log
+env
+targets
+venv
